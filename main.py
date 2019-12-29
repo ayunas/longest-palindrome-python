@@ -3,11 +3,6 @@ from strArr import strArr
 from getLetter import getLetter
 import re
 
-sentence = open('sentence.txt')
-s = sentence.read()
-sentence.close()
-
-
 ap = '’'
 # print(ap)
 # print(ord('’'))
@@ -41,15 +36,26 @@ def longestPalindrome(string):
 
 
 
+#trying various inputs to test the function
+
+sentence = open('sentence.txt')
+s = sentence.read()
+sentence.close()
+
 str1 = 'Madam In Eden, I’m Adam'
 rand = arrStr([getLetter() for i in range(10)])
 
 teststring = rand + str1 + rand
 
 longtest = rand + s + rand
-
 x = longestPalindrome(longtest)
 print('the worlds longest palindrome:', len(x), 'letters long')
+
+l = longestPalindrome(teststring)
+print(l)
+
+
+
 
 
 
